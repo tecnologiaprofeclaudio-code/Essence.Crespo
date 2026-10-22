@@ -156,9 +156,10 @@
    1. CONFIGURACIÓN DEL NEGOCIO  — editá estos valores
    ===================================================================== */
 const CONFIG = {
-  // ⚠️ NÚMERO DE EJEMPLO: reemplazalo por el real, con código de país y sin "+", espacios ni guiones.
-  // Argentina (celular): 549 + código de área sin 0 + número. Ej: 5493434123456
-  whatsappNumber: '5490000000000',
+  // Número de WhatsApp del negocio, con código de país y sin "+", espacios ni guiones.
+  // Argentina (celular): 549 + código de área sin 0 + número.
+  whatsappNumber: '5493434638450',
+  whatsappDisplay: '+54 9 3434 63-8450', // texto visible en el pie de página
   instagram: '@essencecrespo',            // ⚠️ de ejemplo
   ciudad: 'Crespo, Entre Ríos',           // ⚠️ confirmá o cambiá
   horarios: 'Lunes a sábados de 9 a 20 h', // ⚠️ de ejemplo
@@ -1344,7 +1345,7 @@ function init() {
   const generalLink = buildWhatsAppLink(null);
   $('navWhatsapp').href = generalLink;
   $('footerWhatsapp').href = generalLink;
-  $('footerWhatsapp').textContent = 'WhatsApp: ' + CONFIG.whatsappNumber;
+  $('footerWhatsapp').textContent = 'WhatsApp: ' + CONFIG.whatsappDisplay;
   $('footerInstagram').href = 'https://instagram.com/' + CONFIG.instagram.replace('@', '');
   $('footerInstagram').textContent = 'Instagram: ' + CONFIG.instagram;
   $('footerCity').textContent = CONFIG.ciudad;
